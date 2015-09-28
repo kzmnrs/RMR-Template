@@ -1,0 +1,47 @@
+[
+  {"label":"Exam","prefix":"ex","fields":[
+    {"label":"Date","code":"da","type":"us-date","w2field_type":"date", "prior_goto":"pd"},
+    {"label":"Prior date","code":"pd","type":"us-date","w2field_type":"date"}
+  ]},
+  {"label":"Technique","prefix":"te","fields":[
+    {"label":"Modality","code":"mo","type":"list","items":["CT","MR","US"],"prior_goto":""},
+    {"label":"Contrast","code":"cn","type":"combo","items":["None","Omnipaque","Visipaque","Magnevist","Multihance","Eovist","Gadavist"],"prior_goto":""},
+    {"label":"Rate of injection (mL/s)","code":"rc","type":"int","prior_goto":""},
+    {"label":"Volume of contrast (mL)","code":"vc","type":"int","prior_goto":""},
+    {"label":"Quality","code":"qu","type":"list","items":["Adequate","Suboptimal","Nondiagnostic"],"prior_goto":""},
+    {"label":"Comments","code":"co","type":"textarea","prior_goto":""}
+  ]},
+  {"label":"Tumor location","prefix":"lo","fields":[
+    {"label":"Distance of lowest extent of tumor from anal verge (cm)","code":"VergDist","type":"int"},
+    {"label":"Distance of lowest extent of tumor from top of anal sphincter (cm)","code":"SphincDist","type":"int"}, 
+    {"label":"Relationship to peritoneal reflection","code":"PerRef","type":"list","items":["Above","At or straddle","Below","Not able to assess"]}
+  ]},
+  {"label":"Tumor size and characteristics","prefix":"ch","serial":["1"],"fields":[
+    {"label":"Craniocaudal extent (cm)","code":"CCSize","type":"int"},
+    {"label":"From (0'clock) Circumferential Extent","code":"CircExFrom","type":"list","items":["1","2","3","4","5","6","7","8","9","10","11","12","circ"]},
+    {"label":"To (0'clock) Circumferential extent","code":"CircExTo","type":"list","items":["1","2","3","4","5","6","7","8","9","10","11","12","circ"]},
+    {"label":"Mucinous?","code":"Muc","type":"list","items":["Yes","No"]}
+  ]},  
+  {"label":"T staging","prefix":"st","fields":[
+    {"label":"Tumors above puborectalis","code":"Thimid","type":"list","items":["T1","T2","T1/T2","T2","T3","T2/3","T4","T3/4"]},
+    {"label":"Tumors below puborectalis","code":"Tlo","type":"list","items":["T1","Early T2","Advanced T2","T3","T4","T3/4"]}
+  ]},
+  {"label":"Mesorectal fascia and extramural depth of invasion","prefix":"mrf","fields":[
+    {"label":"Shortest distance of tumor to mesorectal fascia (cm), 0 for T4","code":"DistMRF","type":"int"},
+    {"label":"Extramural depth of invasion (cm)","code":"DepthInv","type":"int"},
+    {"label":"Any suspicious component (e.g. spiculation) closer to mesorectal fascia?","code":"SpicMRF","type":"list","items":["No","Yes"]},
+    {"label":"Suspicious component extending from (clockface)","code":"SpicExFrom","type":"list","items":["1","2","3","4","5","6","7","8","9","10","11","12","circ","na"]},
+    {"label":"Suspicious component extending to (clockface)","code":"SpicExTo","type":"list","items":["1","2","3","4","5","6","7","8","9","10","11","12","circ","na"]},    
+	{"label":"Shortest distance of suspicious component to mesorectal fascia (cm), 0 for no suspicion","code":"SpicMRF","type":"int"},
+    {"label":"Extramural vascular invasion?","code":"emvi","type":"list","items":["Absent","Present","Equivocal"]}
+  ]},
+  {"label":"Lymph nodes","prefix":"ln","fields":[
+    {"label":"Suspicious mesorectal lymph nodes?","code":"mrln","type":"list","items":["No","Yes"]},
+	{"label":"Suspicious presacral or extramesorectal lymph nodes?","code":"psln","type":"list","items":["No","Yes"]}, 
+    {"label":"Shortest distance of suspicious mesorectal lymph node to mesorectal fascia (cm), 0 for no suspicion","code":"lnMRF","type":"int"}, 
+    {"label":"Comments","code":"lnco","type":"textarea"}
+  ]},
+  {"label":"Feedback","prefix":"fe","fields":[
+    {"label":"Comments","code":"co","type":"textarea"}
+  ]}
+]
